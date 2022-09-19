@@ -1,5 +1,7 @@
-all: run pause test stop
+all: build run pause test stop
 
+build:
+	docker-compose build
 run:
 	docker run -d -p 5001:5000 \
 		--env CONFIG=foo   \
