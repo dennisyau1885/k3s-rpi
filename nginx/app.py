@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def print_hostname():
-  return str(socket.gethostname())
+  return str(socket.gethostname()) + '\n'
 
 if __name__ == '__main__':
   app.run(debug=True, host='0.0.0.0')
